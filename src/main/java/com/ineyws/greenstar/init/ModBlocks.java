@@ -26,22 +26,28 @@ public class ModBlocks {
                     .lightLevel(state -> 14)  // уровень света как у факела
                     .sound(SoundType.STONE)));
     
-    // Супер-яркий зеленый факел (уровень света 15 - максимум!)
+    // Супер-яркий зеленый факел с МЕГА-эффектами!
     public static final RegistryObject<Block> GREEN_TORCH = BLOCKS.register("green_torch",
-            () -> new TorchBlock(Block.Properties.of(Material.DECORATION)
+            () -> new com.ineyws.greenstar.blocks.GreenTorchBlock(
+                    Block.Properties.of(Material.DECORATION)
                     .noCollission()
                     .instabreak()
                     .lightLevel(state -> 15)  // максимальный уровень света!
-                    .sound(SoundType.WOOD), ParticleTypes.FLAME));
+                    .sound(SoundType.WOOD)
+                    .randomTicks(), // для эффектов
+                    ParticleTypes.FLAME));
     
-    // Настенный зеленый факел
+    // Настенный зеленый факел с теми же эффектами
     public static final RegistryObject<Block> GREEN_WALL_TORCH = BLOCKS.register("green_wall_torch",
-            () -> new WallTorchBlock(Block.Properties.of(Material.DECORATION)
+            () -> new com.ineyws.greenstar.blocks.GreenWallTorchBlock(
+                    Block.Properties.of(Material.DECORATION)
                     .noCollission()
                     .instabreak()
                     .lightLevel(state -> 15)
                     .sound(SoundType.WOOD)
-                    .lootFrom(GREEN_TORCH), ParticleTypes.FLAME));
+                    .randomTicks()
+                    .lootFrom(GREEN_TORCH), 
+                    ParticleTypes.FLAME));
     
     public static void register(IEventBus eventBus) {
         BLOCKS.register(eventBus);
