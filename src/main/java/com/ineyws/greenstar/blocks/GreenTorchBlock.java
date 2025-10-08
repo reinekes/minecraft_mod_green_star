@@ -36,23 +36,14 @@ public class GreenTorchBlock extends TorchBlock {
         // Основное зеленое пламя
         world.addParticle(ParticleTypes.FLAME, d0, d1, d2, 0.0D, 0.0D, 0.0D);
         
-        // Зеленые искры вокруг
-        for(int i = 0; i < 3; i++) {
+        // Только зеленые искры (без лишних эффектов)
+        for(int i = 0; i < 5; i++) {
             double offsetX = (random.nextDouble() - 0.5D) * 0.5D;
             double offsetY = random.nextDouble() * 0.5D;
             double offsetZ = (random.nextDouble() - 0.5D) * 0.5D;
             world.addParticle(ParticleTypes.HAPPY_VILLAGER, 
                 d0 + offsetX, d1 + offsetY, d2 + offsetZ, 
                 0.0D, 0.05D, 0.0D);
-        }
-        
-        // Звездочки
-        if(random.nextInt(3) == 0) {
-            world.addParticle(ParticleTypes.END_ROD, 
-                d0 + (random.nextDouble() - 0.5D) * 0.3D, 
-                d1 + random.nextDouble() * 0.3D, 
-                d2 + (random.nextDouble() - 0.5D) * 0.3D,
-                0.0D, 0.02D, 0.0D);
         }
     }
     
@@ -90,18 +81,18 @@ public class GreenTorchBlock extends TorchBlock {
         List<PlayerEntity> players = world.getEntitiesOfClass(PlayerEntity.class, area);
         
         for(PlayerEntity player : players) {
-            // Скорость II
-            player.addEffect(new EffectInstance(Effects.MOVEMENT_SPEED, EFFECT_DURATION, 1, false, false));
-            // Сила II
-            player.addEffect(new EffectInstance(Effects.DAMAGE_BOOST, EFFECT_DURATION, 1, false, false));
-            // Регенерация I
-            player.addEffect(new EffectInstance(Effects.REGENERATION, EFFECT_DURATION, 0, false, false));
-            // Сопротивление I
-            player.addEffect(new EffectInstance(Effects.DAMAGE_RESISTANCE, EFFECT_DURATION, 0, false, false));
-            // Ночное зрение
-            player.addEffect(new EffectInstance(Effects.NIGHT_VISION, EFFECT_DURATION, 0, false, false));
-            // Огнестойкость
-            player.addEffect(new EffectInstance(Effects.FIRE_RESISTANCE, EFFECT_DURATION, 0, false, false));
+            // Скорость 255 (МАКСИМУМ!)
+            player.addEffect(new EffectInstance(Effects.MOVEMENT_SPEED, EFFECT_DURATION, 255, false, false));
+            // Сила 255 (МАКСИМУМ!)
+            player.addEffect(new EffectInstance(Effects.DAMAGE_BOOST, EFFECT_DURATION, 255, false, false));
+            // Регенерация 255 (МАКСИМУМ!)
+            player.addEffect(new EffectInstance(Effects.REGENERATION, EFFECT_DURATION, 255, false, false));
+            // Сопротивление 255 (МАКСИМУМ!)
+            player.addEffect(new EffectInstance(Effects.DAMAGE_RESISTANCE, EFFECT_DURATION, 255, false, false));
+            // Спешка 255 (МАКСИМУМ!) - копаешь мгновенно!
+            player.addEffect(new EffectInstance(Effects.DIG_SPEED, EFFECT_DURATION, 255, false, false));
+            // Огнестойкость (максимум)
+            player.addEffect(new EffectInstance(Effects.FIRE_RESISTANCE, EFFECT_DURATION, 255, false, false));
         }
     }
     

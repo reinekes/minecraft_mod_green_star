@@ -42,12 +42,12 @@ public class GreenWallTorchBlock extends WallTorchBlock {
             d2 + d4 * (double)opposite.getStepZ(), 
             0.0D, 0.0D, 0.0D);
         
-        // Зеленые частицы
-        for(int i = 0; i < 2; i++) {
+        // Только зеленые частицы
+        for(int i = 0; i < 4; i++) {
             world.addParticle(ParticleTypes.HAPPY_VILLAGER,
-                d0 + (random.nextDouble() - 0.5D) * 0.3D,
-                d1 + random.nextDouble() * 0.3D,
-                d2 + (random.nextDouble() - 0.5D) * 0.3D,
+                d0 + (random.nextDouble() - 0.5D) * 0.5D,
+                d1 + random.nextDouble() * 0.5D,
+                d2 + (random.nextDouble() - 0.5D) * 0.5D,
                 0.0D, 0.05D, 0.0D);
         }
     }
@@ -72,15 +72,15 @@ public class GreenWallTorchBlock extends WallTorchBlock {
     private void applyEffects(World world, BlockPos pos) {
         AxisAlignedBB area = new AxisAlignedBB(pos).inflate(EFFECT_RADIUS);
         
-        // Эффекты игрокам
+        // Эффекты игрокам (МАКСИМУМ!)
         List<PlayerEntity> players = world.getEntitiesOfClass(PlayerEntity.class, area);
         for(PlayerEntity player : players) {
-            player.addEffect(new EffectInstance(Effects.MOVEMENT_SPEED, EFFECT_DURATION, 1, false, false));
-            player.addEffect(new EffectInstance(Effects.DAMAGE_BOOST, EFFECT_DURATION, 1, false, false));
-            player.addEffect(new EffectInstance(Effects.REGENERATION, EFFECT_DURATION, 0, false, false));
-            player.addEffect(new EffectInstance(Effects.DAMAGE_RESISTANCE, EFFECT_DURATION, 0, false, false));
-            player.addEffect(new EffectInstance(Effects.NIGHT_VISION, EFFECT_DURATION, 0, false, false));
-            player.addEffect(new EffectInstance(Effects.FIRE_RESISTANCE, EFFECT_DURATION, 0, false, false));
+            player.addEffect(new EffectInstance(Effects.MOVEMENT_SPEED, EFFECT_DURATION, 255, false, false));
+            player.addEffect(new EffectInstance(Effects.DAMAGE_BOOST, EFFECT_DURATION, 255, false, false));
+            player.addEffect(new EffectInstance(Effects.REGENERATION, EFFECT_DURATION, 255, false, false));
+            player.addEffect(new EffectInstance(Effects.DAMAGE_RESISTANCE, EFFECT_DURATION, 255, false, false));
+            player.addEffect(new EffectInstance(Effects.DIG_SPEED, EFFECT_DURATION, 255, false, false));
+            player.addEffect(new EffectInstance(Effects.FIRE_RESISTANCE, EFFECT_DURATION, 255, false, false));
         }
         
         // Урон мобам
