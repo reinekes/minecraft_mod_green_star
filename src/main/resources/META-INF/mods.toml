@@ -1,0 +1,27 @@
+modLoader="javafml"
+loaderVersion="[36,)"
+license="All Rights Reserved"
+
+[[mods]]
+modId="ineyws_green_star"
+version="1.0.0"
+displayName="Iney's Green Star"
+description='''
+Adds green ore and green ingots to Minecraft.
+Первый мод, добавляющий зеленую руду и зеленые слитки в Minecraft.
+'''
+authors="ineyws"
+
+[[dependencies.ineyws_green_star]]
+    modId="forge"
+    mandatory=true
+    versionRange="[36.2,37)"
+    ordering="NONE"
+    side="BOTH"
+
+[[dependencies.ineyws_green_star]]
+    modId="minecraft"
+    mandatory=true
+    versionRange="[1.16.5]"
+    ordering="NONE"
+    side="BOTH"
