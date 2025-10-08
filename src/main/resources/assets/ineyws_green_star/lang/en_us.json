@@ -1,4 +1,6 @@
 {
   "block.ineyws_green_star.green_ore": "Green Ore",
-  "item.ineyws_green_star.green_ingot": "Green Ingot"
+  "item.ineyws_green_star.green_ingot": "Green Ingot",
+  "item.ineyws_green_star.green_sword": "Green Sword",
+  "item.ineyws_green_star.green_pickaxe": "Green Pickaxe"
 }

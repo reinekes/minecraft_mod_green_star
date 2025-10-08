@@ -1,9 +1,8 @@
 package com.ineyws.greenstar.init;
 
 import com.ineyws.greenstar.IneyWSGreenStar;
-import net.minecraft.item.BlockItem;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemGroup;
+import com.ineyws.greenstar.items.GreenItemTier;
+import net.minecraft.item.*;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.registries.DeferredRegister;
@@ -22,6 +21,15 @@ public class ModItems {
     public static final RegistryObject<BlockItem> GREEN_ORE_ITEM = ITEMS.register("green_ore",
             () -> new BlockItem(ModBlocks.GREEN_ORE.get(), 
                     new Item.Properties().tab(ItemGroup.TAB_BUILDING_BLOCKS)));
+    
+    // Супер-инструменты из зеленых слитков (в 10 раз сильнее алмазных!)
+    public static final RegistryObject<SwordItem> GREEN_SWORD = ITEMS.register("green_sword",
+            () -> new SwordItem(GreenItemTier.GREEN, 3, -2.4F,
+                    new Item.Properties().tab(ItemGroup.TAB_COMBAT)));
+    
+    public static final RegistryObject<PickaxeItem> GREEN_PICKAXE = ITEMS.register("green_pickaxe",
+            () -> new PickaxeItem(GreenItemTier.GREEN, 1, -2.8F,
+                    new Item.Properties().tab(ItemGroup.TAB_TOOLS)));
     
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
