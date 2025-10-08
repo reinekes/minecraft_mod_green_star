@@ -4,11 +4,11 @@ license="All Rights Reserved"
 
 [[mods]]
 modId="ineyws_green_star"
-version="1.2.0"
+version="1.3.0"
 displayName="Iney's Green Star"
 description='''
-Adds green ore, ingots and super powerful tools (10x stronger than diamond) to Minecraft.
-Добавляет зеленую руду, слитки и супер-мощные инструменты (в 10 раз сильнее алмазных) в Minecraft.
+Adds green ore, ingots, super powerful tools and ultra-bright torches to Minecraft.
+Добавляет зеленую руду, слитки, супер-мощные инструменты и супер-яркие факелы в Minecraft.
 '''
 authors="ineyws"
 

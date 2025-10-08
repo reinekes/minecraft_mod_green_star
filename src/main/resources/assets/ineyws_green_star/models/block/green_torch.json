@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/template_torch",
+  "textures": {
+    "torch": "ineyws_green_star:block/green_torch"
+  }
+}
