@@ -4,11 +4,11 @@ license="All Rights Reserved"
 
 [[mods]]
 modId="ineyws_green_star"
-version="1.0.0"
+version="1.1.0"
 displayName="Iney's Green Star"
 description='''
-Adds green ore and green ingots to Minecraft.
-Первый мод, добавляющий зеленую руду и зеленые слитки в Minecraft.
+Adds green ore with world generation and green ingots to Minecraft.
+Добавляет зеленую руду с генерацией в мире и зеленые слитки в Minecraft.
 '''
 authors="ineyws"
 

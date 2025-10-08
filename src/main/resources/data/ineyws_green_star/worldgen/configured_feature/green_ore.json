@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:ore",
+  "config": {
+    "state": {
+      "Name": "ineyws_green_star:green_ore"
+    },
+    "size": 9,
+    "discard_chance_on_air_exposure": 0.0,
+    "target": {
+      "predicate_type": "minecraft:tag_match",
+      "tag": "minecraft:base_stone_overworld"
+    }
+  }
+}
