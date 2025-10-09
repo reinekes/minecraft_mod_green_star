@@ -3,5 +3,12 @@
   "block.ineyws_green_star.green_torch": "Super Bright Green Torch",
   "item.ineyws_green_star.green_ingot": "Green Ingot",
   "item.ineyws_green_star.green_sword": "Green Sword",
-  "item.ineyws_green_star.green_pickaxe": "Green Pickaxe"
+  "item.ineyws_green_star.green_pickaxe": "Green Pickaxe",
+  "item.ineyws_green_star.green_axe": "Green Axe",
+  "item.ineyws_green_star.green_shovel": "Green Shovel",
+  "item.ineyws_green_star.green_hoe": "Green Hoe",
+  "item.ineyws_green_star.green_helmet": "Green Helmet",
+  "item.ineyws_green_star.green_chestplate": "Green Chestplate",
+  "item.ineyws_green_star.green_leggings": "Green Leggings",
+  "item.ineyws_green_star.green_boots": "Green Boots"
 }

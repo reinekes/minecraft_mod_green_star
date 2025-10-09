@@ -2,6 +2,8 @@ package com.ineyws.greenstar.init;
 
 import com.ineyws.greenstar.IneyWSGreenStar;
 import com.ineyws.greenstar.blocks.GreenOreBlock;
+import com.ineyws.greenstar.blocks.GreenTorchBlock;
+import com.ineyws.greenstar.blocks.GreenWallTorchBlock;
 import net.minecraft.block.*;
 import net.minecraft.block.material.Material;
 import net.minecraft.particles.ParticleTypes;
@@ -28,7 +30,7 @@ public class ModBlocks {
     
     // Обычный зеленый факел (просто другая текстура)
     public static final RegistryObject<Block> GREEN_TORCH = BLOCKS.register("green_torch",
-            () -> new TorchBlock(Block.Properties.of(Material.DECORATION)
+            () -> new GreenTorchBlock(Block.Properties.of(Material.DECORATION)
                     .noCollission()
                     .instabreak()
                     .lightLevel(state -> 14)
@@ -36,7 +38,7 @@ public class ModBlocks {
     
     // Настенный зеленый факел
     public static final RegistryObject<Block> GREEN_WALL_TORCH = BLOCKS.register("green_wall_torch",
-            () -> new WallTorchBlock(Block.Properties.of(Material.DECORATION)
+            () -> new GreenWallTorchBlock(Block.Properties.of(Material.DECORATION)
                     .noCollission()
                     .instabreak()
                     .lightLevel(state -> 14)

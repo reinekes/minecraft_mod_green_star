@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "G G",
+    "GGG",
+    "GGG"
+  ],
+  "key": {
+    "G": {
+      "item": "ineyws_green_star:green_ingot"
+    }
+  },
+  "result": {
+    "item": "ineyws_green_star:green_chestplate"
+  }
+}

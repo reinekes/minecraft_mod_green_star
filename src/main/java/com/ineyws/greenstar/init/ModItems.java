@@ -1,7 +1,9 @@
 package com.ineyws.greenstar.init;
 
 import com.ineyws.greenstar.IneyWSGreenStar;
+import com.ineyws.greenstar.items.GreenArmorMaterial;
 import com.ineyws.greenstar.items.GreenItemTier;
+import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.item.*;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.RegistryObject;
@@ -35,6 +37,35 @@ public class ModItems {
     public static final RegistryObject<PickaxeItem> GREEN_PICKAXE = ITEMS.register("green_pickaxe",
             () -> new PickaxeItem(GreenItemTier.GREEN, 1, -2.8F,
                     new Item.Properties().tab(ItemGroup.TAB_TOOLS)));
+    
+    public static final RegistryObject<AxeItem> GREEN_AXE = ITEMS.register("green_axe",
+            () -> new AxeItem(GreenItemTier.GREEN, 5, -3.0F,
+                    new Item.Properties().tab(ItemGroup.TAB_TOOLS)));
+    
+    public static final RegistryObject<ShovelItem> GREEN_SHOVEL = ITEMS.register("green_shovel",
+            () -> new ShovelItem(GreenItemTier.GREEN, 1.5F, -3.0F,
+                    new Item.Properties().tab(ItemGroup.TAB_TOOLS)));
+    
+    public static final RegistryObject<HoeItem> GREEN_HOE = ITEMS.register("green_hoe",
+            () -> new HoeItem(GreenItemTier.GREEN, -3, 0.0F,
+                    new Item.Properties().tab(ItemGroup.TAB_TOOLS)));
+    
+    // Супер-броня из зеленых слитков (в 10 раз сильнее алмазной!)
+    public static final RegistryObject<ArmorItem> GREEN_HELMET = ITEMS.register("green_helmet",
+            () -> new ArmorItem(GreenArmorMaterial.GREEN, EquipmentSlotType.HEAD,
+                    new Item.Properties().tab(ItemGroup.TAB_COMBAT)));
+    
+    public static final RegistryObject<ArmorItem> GREEN_CHESTPLATE = ITEMS.register("green_chestplate",
+            () -> new ArmorItem(GreenArmorMaterial.GREEN, EquipmentSlotType.CHEST,
+                    new Item.Properties().tab(ItemGroup.TAB_COMBAT)));
+    
+    public static final RegistryObject<ArmorItem> GREEN_LEGGINGS = ITEMS.register("green_leggings",
+            () -> new ArmorItem(GreenArmorMaterial.GREEN, EquipmentSlotType.LEGS,
+                    new Item.Properties().tab(ItemGroup.TAB_COMBAT)));
+    
+    public static final RegistryObject<ArmorItem> GREEN_BOOTS = ITEMS.register("green_boots",
+            () -> new ArmorItem(GreenArmorMaterial.GREEN, EquipmentSlotType.FEET,
+                    new Item.Properties().tab(ItemGroup.TAB_COMBAT)));
     
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);

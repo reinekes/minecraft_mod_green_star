@@ -3,5 +3,12 @@
   "block.ineyws_green_star.green_torch": "Супер-яркий зеленый факел",
   "item.ineyws_green_star.green_ingot": "Зеленый слиток",
   "item.ineyws_green_star.green_sword": "Зеленый меч",
-  "item.ineyws_green_star.green_pickaxe": "Зеленая кирка"
+  "item.ineyws_green_star.green_pickaxe": "Зеленая кирка",
+  "item.ineyws_green_star.green_axe": "Зеленый топор",
+  "item.ineyws_green_star.green_shovel": "Зеленая лопата",
+  "item.ineyws_green_star.green_hoe": "Зеленая мотыга",
+  "item.ineyws_green_star.green_helmet": "Зеленый шлем",
+  "item.ineyws_green_star.green_chestplate": "Зеленый нагрудник",
+  "item.ineyws_green_star.green_leggings": "Зеленые поножи",
+  "item.ineyws_green_star.green_boots": "Зеленые ботинки"
 }

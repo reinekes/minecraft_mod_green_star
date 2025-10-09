@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "GG ",
+    " S ",
+    " S "
+  ],
+  "key": {
+    "G": {
+      "item": "ineyws_green_star:green_ingot"
+    },
+    "S": {
+      "item": "minecraft:stick"
+    }
+  },
+  "result": {
+    "item": "ineyws_green_star:green_hoe"
+  }
+}
