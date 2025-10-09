@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "ineyws_green_star:block/death_moon_ore"
+  }
+}

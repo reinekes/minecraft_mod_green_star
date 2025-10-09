@@ -1,6 +1,7 @@
 package com.ineyws.greenstar.init;
 
 import com.ineyws.greenstar.IneyWSGreenStar;
+import com.ineyws.greenstar.blocks.DeathMoonOreBlock;
 import com.ineyws.greenstar.blocks.GreenOreBlock;
 import com.ineyws.greenstar.blocks.GreenTorchBlock;
 import com.ineyws.greenstar.blocks.GreenWallTorchBlock;
@@ -44,6 +45,16 @@ public class ModBlocks {
                     .lightLevel(state -> 14)
                     .sound(SoundType.WOOD)
                     .lootFrom(GREEN_TORCH), ParticleTypes.FLAME));
+    
+    // Блок руды Death Moon - добывается только зеленой киркой
+    public static final RegistryObject<Block> DEATH_MOON_ORE = BLOCKS.register("death_moon_ore",
+            () -> new DeathMoonOreBlock(Block.Properties.of(Material.STONE)
+                    .strength(50.0f, 1200.0f)  // прочность как у обсидиана
+                    .harvestLevel(4)            // требуется зеленая кирка (уровень 4)
+                    .harvestTool(ToolType.PICKAXE)
+                    .requiresCorrectToolForDrops()
+                    .lightLevel(state -> 5)     // светится на уровне 5
+                    .sound(SoundType.STONE)));
     
     public static void register(IEventBus eventBus) {
         BLOCKS.register(eventBus);

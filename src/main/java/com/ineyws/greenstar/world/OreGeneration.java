@@ -38,5 +38,17 @@ public class OreGeneration {
                         .range(64) // максимальная высота
                         .squared() // распределение
                         .count(20)); // количество попыток генерации на чанк
+        
+        // Генерация руды Death Moon
+        // Появляется на той же высоте что и алмазы (0-16), редкая
+        settings.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES,
+                Feature.ORE.configured(
+                        new OreFeatureConfig(
+                                OreFeatureConfig.FillerBlockType.NATURAL_STONE,
+                                ModBlocks.DEATH_MOON_ORE.get().defaultBlockState(),
+                                3)) // размер жилы (маленькая, как алмазы)
+                        .range(16) // максимальная высота (как у алмазов)
+                        .squared()
+                        .count(1)); // редкая (1 попытка на чанк)
     }
 }

@@ -24,6 +24,11 @@ public class ModItems {
             () -> new BlockItem(ModBlocks.GREEN_ORE.get(), 
                     new Item.Properties().tab(ItemGroup.TAB_BUILDING_BLOCKS)));
     
+    // BlockItem для блока руды Death Moon
+    public static final RegistryObject<BlockItem> DEATH_MOON_ORE_ITEM = ITEMS.register("death_moon_ore",
+            () -> new BlockItem(ModBlocks.DEATH_MOON_ORE.get(), 
+                    new Item.Properties().tab(ItemGroup.TAB_BUILDING_BLOCKS)));
+    
     // Супер-яркий зеленый факел
     public static final RegistryObject<WallOrFloorItem> GREEN_TORCH_ITEM = ITEMS.register("green_torch",
             () -> new WallOrFloorItem(ModBlocks.GREEN_TORCH.get(), ModBlocks.GREEN_WALL_TORCH.get(),
