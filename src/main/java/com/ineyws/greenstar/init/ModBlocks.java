@@ -50,7 +50,7 @@ public class ModBlocks {
     public static final RegistryObject<Block> DEATH_MOON_ORE = BLOCKS.register("death_moon_ore",
             () -> new DeathMoonOreBlock(Block.Properties.of(Material.STONE)
                     .strength(50.0f, 1200.0f)  // прочность как у обсидиана
-                    .harvestLevel(4)            // требуется зеленая кирка (уровень 4)
+                    .harvestLevel(5)            // требуется зеленая кирка (уровень 5, выше незерита)
                     .harvestTool(ToolType.PICKAXE)
                     .requiresCorrectToolForDrops()
                     .lightLevel(state -> 5)     // светится на уровне 5

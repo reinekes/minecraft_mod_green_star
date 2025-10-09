@@ -19,6 +19,10 @@ public class ModItems {
     public static final RegistryObject<Item> GREEN_INGOT = ITEMS.register("green_ingot",
             () -> new Item(new Item.Properties().tab(ItemGroup.TAB_MATERIALS)));
     
+    // Слиток Death Moon
+    public static final RegistryObject<Item> DEATH_MOON_INGOT = ITEMS.register("death_moon_ingot",
+            () -> new Item(new Item.Properties().tab(ItemGroup.TAB_MATERIALS)));
+    
     // BlockItem для блока зеленой руды
     public static final RegistryObject<BlockItem> GREEN_ORE_ITEM = ITEMS.register("green_ore",
             () -> new BlockItem(ModBlocks.GREEN_ORE.get(), 
