@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "ineyws_green_star:item/death_moon_helmet"
+  }
+}

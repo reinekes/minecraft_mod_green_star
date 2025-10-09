@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "D",
+    "D",
+    "S"
+  ],
+  "key": {
+    "D": {
+      "item": "ineyws_green_star:death_moon_ingot"
+    },
+    "S": {
+      "item": "minecraft:stick"
+    }
+  },
+  "result": {
+    "item": "ineyws_green_star:death_moon_sword"
+  }
+}

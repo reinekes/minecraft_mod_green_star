@@ -1,8 +1,7 @@
 package com.ineyws.greenstar.init;
 
 import com.ineyws.greenstar.IneyWSGreenStar;
-import com.ineyws.greenstar.items.GreenArmorMaterial;
-import com.ineyws.greenstar.items.GreenItemTier;
+import com.ineyws.greenstar.items.*;
 import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.item.*;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -74,6 +73,44 @@ public class ModItems {
     
     public static final RegistryObject<ArmorItem> GREEN_BOOTS = ITEMS.register("green_boots",
             () -> new ArmorItem(GreenArmorMaterial.GREEN, EquipmentSlotType.FEET,
+                    new Item.Properties().tab(ItemGroup.TAB_COMBAT)));
+    
+    // Супер-мощные инструменты Death Moon!
+    public static final RegistryObject<SwordItem> DEATH_MOON_SWORD = ITEMS.register("death_moon_sword",
+            () -> new SwordItem(DeathMoonItemTier.DEATH_MOON, 250, 6.0F,
+                    new Item.Properties().tab(ItemGroup.TAB_COMBAT)));
+    
+    public static final RegistryObject<PickaxeItem> DEATH_MOON_PICKAXE = ITEMS.register("death_moon_pickaxe",
+            () -> new DeathMoonPickaxeItem(DeathMoonItemTier.DEATH_MOON, 60, -2.8F,
+                    new Item.Properties().tab(ItemGroup.TAB_TOOLS)));
+    
+    public static final RegistryObject<AxeItem> DEATH_MOON_AXE = ITEMS.register("death_moon_axe",
+            () -> new DeathMoonAxeItem(DeathMoonItemTier.DEATH_MOON, 100, -3.0F,
+                    new Item.Properties().tab(ItemGroup.TAB_TOOLS)));
+    
+    public static final RegistryObject<ShovelItem> DEATH_MOON_SHOVEL = ITEMS.register("death_moon_shovel",
+            () -> new DeathMoonShovelItem(DeathMoonItemTier.DEATH_MOON, 50, -3.0F, 550.0F,
+                    new Item.Properties().tab(ItemGroup.TAB_TOOLS)));
+    
+    public static final RegistryObject<HoeItem> DEATH_MOON_HOE = ITEMS.register("death_moon_hoe",
+            () -> new HoeItem(DeathMoonItemTier.DEATH_MOON, 45, 0.0F,
+                    new Item.Properties().tab(ItemGroup.TAB_TOOLS)));
+    
+    // Супер-мощная броня Death Moon (в 2 раза сильнее зеленой)!
+    public static final RegistryObject<ArmorItem> DEATH_MOON_HELMET = ITEMS.register("death_moon_helmet",
+            () -> new ArmorItem(DeathMoonArmorMaterial.DEATH_MOON, EquipmentSlotType.HEAD,
+                    new Item.Properties().tab(ItemGroup.TAB_COMBAT)));
+    
+    public static final RegistryObject<ArmorItem> DEATH_MOON_CHESTPLATE = ITEMS.register("death_moon_chestplate",
+            () -> new ArmorItem(DeathMoonArmorMaterial.DEATH_MOON, EquipmentSlotType.CHEST,
+                    new Item.Properties().tab(ItemGroup.TAB_COMBAT)));
+    
+    public static final RegistryObject<ArmorItem> DEATH_MOON_LEGGINGS = ITEMS.register("death_moon_leggings",
+            () -> new ArmorItem(DeathMoonArmorMaterial.DEATH_MOON, EquipmentSlotType.LEGS,
+                    new Item.Properties().tab(ItemGroup.TAB_COMBAT)));
+    
+    public static final RegistryObject<ArmorItem> DEATH_MOON_BOOTS = ITEMS.register("death_moon_boots",
+            () -> new ArmorItem(DeathMoonArmorMaterial.DEATH_MOON, EquipmentSlotType.FEET,
                     new Item.Properties().tab(ItemGroup.TAB_COMBAT)));
     
     public static void register(IEventBus eventBus) {
