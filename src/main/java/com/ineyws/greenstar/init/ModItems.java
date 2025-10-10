@@ -128,6 +128,11 @@ public class ModItems {
             () -> new ArmorItem(DeathMoonArmorMaterial.DEATH_MOON, EquipmentSlotType.FEET,
                     new Item.Properties().tab(ItemGroup.TAB_COMBAT)));
     
+    // SUPER PICKAXE! Breaks bedrock!
+    public static final RegistryObject<PickaxeItem> BEDROCK_BREAKER = ITEMS.register("bedrock_breaker",
+            () -> new BedrockBreakerPickaxe(DeathMoonItemTier.DEATH_MOON, 100, -2.0F,
+                    new Item.Properties().tab(ItemGroup.TAB_TOOLS)));
+    
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
     }
