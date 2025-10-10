@@ -2,6 +2,7 @@ package com.ineyws.greenstar.init;
 
 import com.ineyws.greenstar.IneyWSGreenStar;
 import com.ineyws.greenstar.blocks.DeathMoonOreBlock;
+import com.ineyws.greenstar.blocks.GlassOfTimeBlock;
 import com.ineyws.greenstar.blocks.GreenOreBlock;
 import com.ineyws.greenstar.blocks.GreenTorchBlock;
 import com.ineyws.greenstar.blocks.GreenWallTorchBlock;
@@ -55,6 +56,16 @@ public class ModBlocks {
                     .requiresCorrectToolForDrops()
                     .lightLevel(state -> 5)     // светится на уровне 5
                     .sound(SoundType.STONE)));
+    
+    // Стекло Времени - блок энд данжа
+    public static final RegistryObject<Block> GLASS_OF_TIME = BLOCKS.register("glass_of_time",
+            () -> new GlassOfTimeBlock(Block.Properties.of(Material.GLASS)
+                    .strength(200.0f, 200.0f)   // высокая прочность
+                    .harvestLevel(4)             // требуется зеленая кирка (уровень 4+)
+                    .harvestTool(ToolType.PICKAXE)
+                    .requiresCorrectToolForDrops()
+                    .sound(SoundType.GLASS)
+                    .noOcclusion()));            // прозрачный как стекло
     
     public static void register(IEventBus eventBus) {
         BLOCKS.register(eventBus);
