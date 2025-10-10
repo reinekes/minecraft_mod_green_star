@@ -1,7 +1,9 @@
 {
   "block.ineyws_green_star.green_ore": "Green Ore",
   "block.ineyws_green_star.green_torch": "Super Bright Green Torch",
+  "block.ineyws_green_star.green_block": "Block of Green Metal",
   "block.ineyws_green_star.death_moon_ore": "Death Moon Ore",
+  "block.ineyws_green_star.death_moon_block": "Block of Death Moon",
   "block.ineyws_green_star.glass_of_time": "Glass of Time",
   "item.ineyws_green_star.green_ingot": "Green Ingot",
   "item.ineyws_green_star.death_moon_ingot": "Death Moon Ingot",

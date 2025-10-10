@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "III",
+    "III",
+    "III"
+  ],
+  "key": {
+    "I": {
+      "item": "ineyws_green_star:death_moon_ingot"
+    }
+  },
+  "result": {
+    "item": "ineyws_green_star:death_moon_block"
+  }
+}

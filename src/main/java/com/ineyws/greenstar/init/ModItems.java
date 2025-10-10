@@ -37,6 +37,16 @@ public class ModItems {
             () -> new BlockItem(ModBlocks.GLASS_OF_TIME.get(), 
                     new Item.Properties().tab(ItemGroup.TAB_BUILDING_BLOCKS)));
     
+    // BlockItem для блока зеленого металла
+    public static final RegistryObject<BlockItem> GREEN_BLOCK_ITEM = ITEMS.register("green_block",
+            () -> new BlockItem(ModBlocks.GREEN_BLOCK.get(), 
+                    new Item.Properties().tab(ItemGroup.TAB_BUILDING_BLOCKS)));
+    
+    // BlockItem для блока Death Moon
+    public static final RegistryObject<BlockItem> DEATH_MOON_BLOCK_ITEM = ITEMS.register("death_moon_block",
+            () -> new BlockItem(ModBlocks.DEATH_MOON_BLOCK.get(), 
+                    new Item.Properties().tab(ItemGroup.TAB_BUILDING_BLOCKS)));
+    
     // Супер-яркий зеленый факел
     public static final RegistryObject<WallOrFloorItem> GREEN_TORCH_ITEM = ITEMS.register("green_torch",
             () -> new WallOrFloorItem(ModBlocks.GREEN_TORCH.get(), ModBlocks.GREEN_WALL_TORCH.get(),

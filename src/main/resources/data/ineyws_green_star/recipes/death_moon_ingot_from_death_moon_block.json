@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "ineyws_green_star:death_moon_block"
+    }
+  ],
+  "result": {
+    "item": "ineyws_green_star:death_moon_ingot",
+    "count": 9
+  }
+}

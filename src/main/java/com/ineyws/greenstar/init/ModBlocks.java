@@ -67,6 +67,24 @@ public class ModBlocks {
                     .sound(SoundType.GLASS)
                     .noOcclusion()));            // прозрачный как стекло
     
+    // Блок зеленого металла (из 9 слитков)
+    public static final RegistryObject<Block> GREEN_BLOCK = BLOCKS.register("green_block",
+            () -> new Block(Block.Properties.of(Material.METAL)
+                    .strength(5.0f, 6.0f)        // прочность как у железного блока
+                    .harvestLevel(1)             // требуется каменная кирка
+                    .harvestTool(ToolType.PICKAXE)
+                    .requiresCorrectToolForDrops()
+                    .sound(SoundType.METAL)));
+    
+    // Блок Death Moon (из 9 слитков)
+    public static final RegistryObject<Block> DEATH_MOON_BLOCK = BLOCKS.register("death_moon_block",
+            () -> new Block(Block.Properties.of(Material.METAL)
+                    .strength(50.0f, 1200.0f)    // очень прочный
+                    .harvestLevel(4)             // требуется зеленая кирка
+                    .harvestTool(ToolType.PICKAXE)
+                    .requiresCorrectToolForDrops()
+                    .sound(SoundType.METAL)));
+    
     public static void register(IEventBus eventBus) {
         BLOCKS.register(eventBus);
     }
