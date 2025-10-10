@@ -7,15 +7,13 @@ import net.minecraft.item.ItemStack;
 import net.minecraftforge.event.AnvilUpdateEvent;
 import net.minecraftforge.event.enchanting.EnchantmentLevelSetEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.fml.common.Mod;
 
 import java.util.Map;
 
-@Mod.EventBusSubscriber(modid = IneyWSGreenStar.MOD_ID)
 public class EnchantmentHandler {
     
     @SubscribeEvent
-    public static void onEnchantmentLevelSet(EnchantmentLevelSetEvent event) {
+    public void onEnchantmentLevelSet(EnchantmentLevelSetEvent event) {
         ItemStack stack = event.getItem();
         
         if (stack.getItem().getRegistryName() != null && 
@@ -25,7 +23,7 @@ public class EnchantmentHandler {
     }
     
     @SubscribeEvent
-    public static void onAnvilUpdate(AnvilUpdateEvent event) {
+    public void onAnvilUpdate(AnvilUpdateEvent event) {
         ItemStack left = event.getLeft();
         ItemStack right = event.getRight();
         

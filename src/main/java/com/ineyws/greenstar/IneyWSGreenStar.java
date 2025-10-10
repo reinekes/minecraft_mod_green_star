@@ -1,7 +1,10 @@
 package com.ineyws.greenstar;
 
+import com.ineyws.greenstar.events.BedrockBreakHandler;
+import com.ineyws.greenstar.events.EnchantmentHandler;
 import com.ineyws.greenstar.init.ModBlocks;
 import com.ineyws.greenstar.init.ModItems;
+import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
@@ -24,6 +27,10 @@ public class IneyWSGreenStar {
         
         // Регистрация обработчика событий
         modEventBus.addListener(this::setup);
+        
+        // Регистрация игровых событий на FORGE шине
+        MinecraftForge.EVENT_BUS.register(new BedrockBreakHandler());
+        MinecraftForge.EVENT_BUS.register(new EnchantmentHandler());
         
         LOGGER.info("Iney's Green Star mod initialized!");
     }
