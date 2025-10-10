@@ -77,7 +77,7 @@ public class ModBlocks {
                     .sound(SoundType.METAL)));
     
     // Блок Death Moon (из 9 слитков)
-    public static final RegistryObject<Block> DEATH_MOON_BLOCK = BLOCKS.register("death_moon_block",
+    public static final RegistryObject<Block> DEATH_MOON_BLOCK = BLOCKS.register("dead_moon_block",
             () -> new Block(Block.Properties.of(Material.METAL)
                     .strength(50.0f, 1200.0f)    // очень прочный
                     .harvestLevel(4)             // требуется зеленая кирка

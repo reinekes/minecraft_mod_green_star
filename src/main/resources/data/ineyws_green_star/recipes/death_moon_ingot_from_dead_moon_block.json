@@ -1,8 +1,8 @@
-{
+﻿{
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
     {
-      "item": "ineyws_green_star:death_moon_block"
+      "item": "ineyws_green_star:dead_moon_block"
     }
   ],
   "result": {

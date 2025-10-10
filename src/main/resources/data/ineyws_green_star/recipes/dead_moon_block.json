@@ -1,4 +1,4 @@
-{
+﻿{
   "type": "minecraft:crafting_shaped",
   "pattern": [
     "III",
@@ -11,6 +11,6 @@
     }
   },
   "result": {
-    "item": "ineyws_green_star:death_moon_block"
+    "item": "ineyws_green_star:dead_moon_block"
   }
 }

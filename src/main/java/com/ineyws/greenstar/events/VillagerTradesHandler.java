@@ -23,9 +23,9 @@ public class VillagerTradesHandler {
     public static void onVillagerTrades(VillagerTradesEvent event) {
         Int2ObjectMap<List<VillagerTrades.ITrade>> trades = event.getTrades();
         
-        // Добавляем сделку ВСЕМ жителям на уровне мастера (5)
-        if (trades.containsKey(5)) {
-            trades.get(5).add((trader, random) -> {
+        // Добавляем сделку ВСЕМ жителям на уровне мастера (1)
+        if (trades.containsKey(1)) {
+            trades.get(1).add((trader, random) -> {
                 // Создаем зачарованную кирку Death Moon
                 ItemStack enchantedPickaxe = new ItemStack(ModItems.DEATH_MOON_PICKAXE.get());
                 enchantedPickaxe.enchant(Enchantments.BLOCK_EFFICIENCY, 5);  // Эффективность 5

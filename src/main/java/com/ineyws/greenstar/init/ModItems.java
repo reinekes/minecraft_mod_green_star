@@ -43,7 +43,7 @@ public class ModItems {
                     new Item.Properties().tab(ItemGroup.TAB_BUILDING_BLOCKS)));
     
     // BlockItem для блока Death Moon
-    public static final RegistryObject<BlockItem> DEATH_MOON_BLOCK_ITEM = ITEMS.register("death_moon_block",
+    public static final RegistryObject<BlockItem> DEATH_MOON_BLOCK_ITEM = ITEMS.register("dead_moon_block",
             () -> new BlockItem(ModBlocks.DEATH_MOON_BLOCK.get(), 
                     new Item.Properties().tab(ItemGroup.TAB_BUILDING_BLOCKS)));
     

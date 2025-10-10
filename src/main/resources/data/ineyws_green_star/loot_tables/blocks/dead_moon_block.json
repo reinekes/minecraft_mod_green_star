@@ -1,4 +1,4 @@
-{
+﻿{
   "type": "minecraft:block",
   "pools": [
     {
@@ -6,7 +6,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "ineyws_green_star:death_moon_block"
+          "name": "ineyws_green_star:dead_moon_block"
         }
       ],
       "conditions": [
