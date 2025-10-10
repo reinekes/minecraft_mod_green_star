@@ -50,5 +50,17 @@ public class OreGeneration {
                         .range(16) // максимальная высота (как у алмазов)
                         .squared()
                         .count(1)); // редкая (1 попытка на чанк)
+        
+        // Генерация руды бедрока
+        // Очень редкая, как изумруды
+        settings.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES,
+                Feature.ORE.configured(
+                        new OreFeatureConfig(
+                                OreFeatureConfig.FillerBlockType.NATURAL_STONE,
+                                ModBlocks.BEDROCK_ORE.get().defaultBlockState(),
+                                1)) // размер жилы (1 блок, как изумруды)
+                        .range(16) // максимальная высота
+                        .squared()
+                        .count(1)); // очень редкая
     }
 }

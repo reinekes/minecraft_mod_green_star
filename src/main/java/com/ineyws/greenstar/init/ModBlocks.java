@@ -1,6 +1,7 @@
 package com.ineyws.greenstar.init;
 
 import com.ineyws.greenstar.IneyWSGreenStar;
+import com.ineyws.greenstar.blocks.BedrockOreBlock;
 import com.ineyws.greenstar.blocks.DeathMoonOreBlock;
 import com.ineyws.greenstar.blocks.GlassOfTimeBlock;
 import com.ineyws.greenstar.blocks.GreenOreBlock;
@@ -57,11 +58,20 @@ public class ModBlocks {
                     .lightLevel(state -> 5)     // светится на уровне 5
                     .sound(SoundType.STONE)));
     
+    // Руда бедрока - очень редкая, добывается только киркой Death Moon
+    public static final RegistryObject<Block> BEDROCK_ORE = BLOCKS.register("bedrock_ore",
+            () -> new BedrockOreBlock(Block.Properties.of(Material.STONE)
+                    .strength(500.0f, 12000.0f)  // в 10 раз прочнее обсидиана
+                    .harvestLevel(6)              // требуется кирка Death Moon (уровень 6)
+                    .harvestTool(ToolType.PICKAXE)
+                    .requiresCorrectToolForDrops()
+                    .sound(SoundType.ANCIENT_DEBRIS)));
+    
     // Стекло Времени - блок энд данжа
     public static final RegistryObject<Block> GLASS_OF_TIME = BLOCKS.register("glass_of_time",
             () -> new GlassOfTimeBlock(Block.Properties.of(Material.GLASS)
                     .strength(200.0f, 200.0f)   // высокая прочность
-                    .harvestLevel(4)             // требуется зеленая кирка (уровень 4+)
+                    .harvestLevel(5)             // требуется зеленая кирка (уровень 4+)
                     .harvestTool(ToolType.PICKAXE)
                     .requiresCorrectToolForDrops()
                     .sound(SoundType.GLASS)
@@ -71,7 +81,7 @@ public class ModBlocks {
     public static final RegistryObject<Block> GREEN_BLOCK = BLOCKS.register("green_block",
             () -> new Block(Block.Properties.of(Material.METAL)
                     .strength(5.0f, 6.0f)        // прочность как у железного блока
-                    .harvestLevel(1)             // требуется каменная кирка
+                    .harvestLevel(5)             // требуется каменная кирка
                     .harvestTool(ToolType.PICKAXE)
                     .requiresCorrectToolForDrops()
                     .sound(SoundType.METAL)));
@@ -80,7 +90,7 @@ public class ModBlocks {
     public static final RegistryObject<Block> DEATH_MOON_BLOCK = BLOCKS.register("dead_moon_block",
             () -> new Block(Block.Properties.of(Material.METAL)
                     .strength(50.0f, 1200.0f)    // очень прочный
-                    .harvestLevel(4)             // требуется зеленая кирка
+                    .harvestLevel(5)             // требуется зеленая кирка
                     .harvestTool(ToolType.PICKAXE)
                     .requiresCorrectToolForDrops()
                     .sound(SoundType.METAL)));
